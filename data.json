@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "title": "Guia Interativo do Desenvolvedor - Base de Conhecimento",
+    "description": "Curadoria de conteúdos da Alura e fontes oficiais para desenvolvedores.",
+    "language": "pt-BR",
+    "version": "2.0",
+    "updated_at": "2024-05-20"
+  },
+  "sections": [
+    {
+      "id": "linguagens",
+      "title": "Linguagens de Programação",
+      "description": "Os pilares do desenvolvimento de software.",
+      "items": [
+        {
+          "title": "JavaScript: O Guia Definitivo",
+          "description": "Entenda o que é JS, sua história e por que é a linguagem mais popular da web.",
+          "url": "https://www.alura.com.br/artigos/javascript",
+          "source": "Alura"
+        },
+        {
+          "title": "Python: Versatilidade e Dados",
+          "description": "Por que Python é a escolha número 1 para Data Science e iniciantes.",
+          "url": "https://www.alura.com.br/artigos/python",
+          "source": "Alura"
+        },
+        {
+          "title": "Java: A Base Corporativa",
+          "description": "Conceitos de JVM, orientação a objetos e o ecossistema Java.",
+          "url": "https://www.alura.com.br/artigos/java",
+          "source": "Alura"
+        },
+        {
+          "title": "C#: O Poder do .NET",
+          "description": "Introdução ao C# da Microsoft, usado em jogos (Unity) e sistemas enterprise.",
+          "url": "https://www.alura.com.br/artigos/c-sharp",
+          "source": "Alura"
+        },
+        {
+          "title": "PHP: A Linguagem da Web",
+          "description": "Como o PHP sustenta grande parte da internet e frameworks como Laravel.",
+          "url": "https://www.alura.com.br/artigos/php",
+          "source": "Alura"
+        },
+        {
+          "title": "TypeScript: JS com Superpoderes",
+          "description": "Entenda por que adicionar tipagem ao JavaScript tornou-se padrão de mercado.",
+          "url": "https://www.alura.com.br/artigos/typescript",
+          "source": "Alura"
+        }
+      ]
+    },
+    {
+      "id": "tecnologias",
+      "title": "Tecnologias Essenciais",
+      "description": "Ferramentas que todo desenvolvedor deve dominar.",
+      "items": [
+        {
+          "title": "Git e GitHub: Controle de Versão",
+          "description": "O guia completo para iniciantes sobre como salvar e compartilhar código.",
+          "url": "https://www.alura.com.br/artigos/o-que-e-git-github",
+          "source": "Alura"
+        },
+        {
+          "title": "Docker: Containers Explicados",
+          "description": "Acabe com o problema de 'na minha máquina funciona' usando Docker.",
+          "url": "https://www.alura.com.br/artigos/comecando-com-docker",
+          "source": "Alura"
+        },
+        {
+          "title": "Node.js: JS no Back-end",
+          "description": "Como o Node.js revolucionou o desenvolvimento permitindo JS fora do navegador.",
+          "url": "https://www.alura.com.br/artigos/node-js",
+          "source": "Alura"
+        },
+        {
+          "title": "React: Componentização",
+          "description": "A biblioteca mais famosa para criar interfaces modernas e reativas.",
+          "url": "https://www.alura.com.br/artigos/react-js",
+          "source": "Alura"
+        },
+        {
+          "title": "HTTP e APIs REST",
+          "description": "Como a web funciona: verbos HTTP, requisições e respostas.",
+          "url": "https://www.alura.com.br/artigos/rest-conceito-e-fundamentos",
+          "source": "Alura"
+        },
+        {
+          "title": "Linux para Desenvolvedores",
+          "description": "Por que saber usar o terminal Linux é crucial para sua carreira.",
+          "url": "https://www.alura.com.br/artigos/linux",
+          "source": "Alura"
+        }
+      ]
+    },
+    {
+      "id": "bancoDeDados",
+      "title": "Banco de Dados",
+      "description": "Persistência e manipulação de informações.",
+      "items": [
+        {
+          "title": "SQL vs NoSQL",
+          "description": "As principais diferenças entre bancos relacionais e não-relacionais.",
+          "url": "https://www.alura.com.br/artigos/sql-e-nosql",
+          "source": "Alura"
+        },
+        {
+          "title": "MySQL: O Banco Open Source",
+          "description": "Introdução ao banco de dados relacional mais popular do mundo.",
+          "url": "https://www.alura.com.br/artigos/mysql",
+          "source": "Alura"
+        },
+        {
+          "title": "PostgreSQL: Robustez",
+          "description": "Por que o Postgres é o favorito para aplicações complexas.",
+          "url": "https://www.alura.com.br/artigos/postgresql",
+          "source": "Alura"
+        },
+        {
+          "title": "MongoDB: Documentos",
+          "description": "Como funciona um banco orientado a documentos JSON.",
+          "url": "https://www.alura.com.br/artigos/mongodb",
+          "source": "Alura"
+        },
+        {
+          "title": "Modelagem de Dados",
+          "description": "Como estruturar suas tabelas e relacionamentos (MER/DER).",
+          "url": "https://www.alura.com.br/artigos/modelagem-de-dados",
+          "source": "Alura"
+        },
+        {
+          "title": "ORM: Hibernate e Sequelize",
+          "description": "Simplificando o acesso ao banco de dados via código.",
+          "url": "https://www.alura.com.br/artigos/orm",
+          "source": "Alura"
+        }
+      ]
+    },
+    {
+      "id": "iaIniciante",
+      "title": "IA para Iniciantes",
+      "description": "Introdução ao mundo da Inteligência Artificial.",
+      "items": [
+        {
+          "title": "O que é Inteligência Artificial?",
+          "description": "Definições, história e o estado atual da IA.",
+          "url": "https://www.alura.com.br/artigos/inteligencia-artificial",
+          "source": "Alura"
+        },
+        {
+          "title": "Machine Learning Descomplicado",
+          "description": "Entenda como as máquinas aprendem com dados sem serem explicitamente programadas.",
+          "url": "https://www.alura.com.br/artigos/machine-learning",
+          "source": "Alura"
+        },
+        {
+          "title": "IA Generativa (GenAI)",
+          "description": "Como funcionam modelos que criam textos e imagens (ChatGPT, Gemini).",
+          "url": "https://www.alura.com.br/artigos/inteligencia-artificial-generativa",
+          "source": "Alura"
+        },
+        {
+          "title": "Engenharia de Prompt",
+          "description": "A nova habilidade de saber perguntar para obter as melhores respostas da IA.",
+          "url": "https://www.alura.com.br/artigos/engenharia-de-prompt",
+          "source": "Alura"
+        },
+        {
+          "title": "Ética em IA",
+          "description": "Discussões sobre vieses, copyright e o impacto social da IA.",
+          "url": "https://www.alura.com.br/artigos/etica-inteligencia-artificial",
+          "source": "Alura"
+        },
+        {
+          "title": "Carreira em Dados e IA",
+          "description": "Quais são os papéis: Cientista de Dados, Engenheiro de Machine Learning, etc.",
+          "url": "https://www.alura.com.br/artigos/data-science",
+          "source": "Alura"
+        }
+      ]
+    },
+    {
+      "id": "vscode",
+      "title": "VS Code Editor",
+      "description": "Dominando sua ferramenta de trabalho.",
+      "items": [
+        {
+          "title": "Instalação e Primeiros Passos",
+          "description": "Como configurar o VS Code no Windows, Linux ou Mac.",
+          "url": "https://www.alura.com.br/artigos/visual-studio-code-instalacao-teclas-atalho-plugins",
+          "source": "Alura"
+        },
+        {
+          "title": "Atalhos de Teclado Essenciais",
+          "description": "Aumente sua produtividade usando o teclado para tudo.",
+          "url": "https://www.alura.com.br/artigos/atalhos-visual-studio-code",
+          "source": "Alura"
+        },
+        {
+          "title": "Extensões para Front-end",
+          "description": "Live Server, Prettier, ESLint e outras extensões obrigatórias.",
+          "url": "https://www.alura.com.br/artigos/top-10-extensoes-vs-code",
+          "source": "Alura"
+        },
+        {
+          "title": "Terminal Integrado",
+          "description": "Como usar a linha de comando sem sair do editor.",
+          "url": "https://www.alura.com.br/artigos/como-utilizar-terminal-integrado-visual-studio-code",
+          "source": "Alura"
+        },
+        {
+          "title": "Debuggando Código",
+          "description": "Como usar o depurador do VS Code para encontrar erros.",
+          "url": "https://www.alura.com.br/artigos/debug-vscode",
+          "source": "Alura"
+        },
+        {
+          "title": "Git Graph e Integração",
+          "description": "Visualizando o histórico do Git diretamente na interface do VS Code.",
+          "url": "https://www.alura.com.br/artigos/git-graph-vscode",
+          "source": "Alura"
+        }
+      ]
+    },
+    {
+      "id": "googleAi",
+      "title": "Google AI Studio & Gemini",
+      "description": "Criando com a IA do Google.",
+      "items": [
+        {
+          "title": "Google AI Studio: Quickstart",
+          "description": "O passo a passo oficial para começar a usar a plataforma.",
+          "url": "https://ai.google.dev/gemini-api/docs/quickstart?hl=pt-br",
+          "source": "Google Developers"
+        },
+        {
+          "title": "Gerando sua API Key",
+          "description": "Como criar e proteger sua chave de API para usar o Gemini.",
+          "url": "https://aistudio.google.com/app/apikey",
+          "source": "Google AI Studio"
+        },
+        {
+          "title": "Gemini Code Assist no VS Code",
+          "description": "Extensão oficial que traz o Gemini para dentro do seu editor.",
+          "url": "https://cloud.google.com/products/gemini/code-assist?hl=pt-br",
+          "source": "Google Cloud"
+        },
+        {
+          "title": "Design de Prompts",
+          "description": "Estratégias para criar prompts eficazes no AI Studio (Freeform vs Structured).",
+          "url": "https://ai.google.dev/gemini-api/docs/prompting-strategies?hl=pt-br",
+          "source": "Google Developers"
+        },
+        {
+          "title": "Modelos: Flash vs Pro",
+          "description": "Entenda as diferenças entre o Gemini 1.5 Flash (rápido) e Pro (complexo).",
+          "url": "https://ai.google.dev/gemini-api/docs/models/gemini?hl=pt-br",
+          "source": "Google Developers"
+        },
+        {
+          "title": "Integração com JavaScript",
+          "description": "Exemplo de código para chamar a API do Gemini em uma aplicação Web.",
+          "url": "https://ai.google.dev/gemini-api/docs/get-started/tutorial?lang=node",
+          "source": "Google Developers"
+        }
+      ]
+    }
+  ]
+}

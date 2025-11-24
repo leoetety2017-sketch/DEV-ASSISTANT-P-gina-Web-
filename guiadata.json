@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "title": "Guia Interativo do Desenvolvedor - Base de Dados",
+    "description": "Conteúdo específico para a página do Guia do Iniciante (guia.html).",
+    "language": "pt-BR",
+    "version": "1.0",
+    "updated_at": "2025-11-24"
+  },
+  "pages": {
+    "inicio": {
+      "title": "Bem-vindo(a) ao Guia Interativo do Desenvolvedor!",
+      "description": "Esta aplicação foi criada para ser seu ponto de partida no universo da programação. Navegue pelas seções para explorar as principais linguagens, tecnologias e dicas essenciais. O gráfico abaixo ilustra as áreas de foco recomendadas para quem está começando.",
+      "chart": {
+        "title": "Áreas de Foco para Iniciantes",
+        "labels": ["1. Lógica", "2. Linguagem Foco", "3. Ferramentas", "4. Banco de Dados", "5. Cloud/DevOps"],
+        "data": [100, 95, 80, 70, 50]
+      }
+    },
+    "linguagens": {
+      "title": "Linguagens de Programação",
+      "description": "A linguagem é a ferramenta fundamental. Cada uma tem suas forças e é usada em diferentes contextos. Aqui estão 6 das linguagens mais populares e relevantes no mercado hoje.",
+      "items": [
+        {
+          "title": "JavaScript",
+          "description": "A linguagem da web. Essencial para front-end (React, Angular) e cada vez mais popular no back-end (Node.js)."
+        },
+        {
+          "title": "Python",
+          "description": "Excelente para iniciantes. Usada em ciência de dados, inteligência artificial, automação e desenvolvimento web (Django, Flask)."
+        },
+        {
+          "title": "Java",
+          "description": "Robusta e escalável. Dominante em grandes sistemas corporativos, aplicações Android e no ecossistema de Big Data."
+        },
+        {
+          "title": "C# (C-Sharp)",
+          "description": "Desenvolvida pela Microsoft. Forte em desenvolvimento de jogos (Unity), aplicações Windows e web (ASP.NET)."
+        },
+        {
+          "title": "PHP",
+          "description": "Uma linguagem veterana focada em web. Ainda move grande parte da internet, sendo a base do WordPress, Laravel e Symfony."
+        },
+        {
+          "title": "SQL",
+          "description": "Linguagem de consulta (não de programação) usada para gerenciar e consultar bancos de dados relacionais. Essencial."
+        }
+      ]
+    },
+    "tecnologias": {
+      "title": "Tecnologias e Ferramentas",
+      "description": "Além da linguagem, o ecossistema de ferramentas e frameworks define o dia a dia do desenvolvedor. Estas são algumas das tecnologias mais importantes.",
+      "items": [
+        { "title": "Git / GitHub", "description": "Sistema de controle de versão. Fundamental para salvar histórico, colaborar em equipe e gerenciar código-fonte." },
+        { "title": "Docker", "description": "Plataforma de contêineres. Permite 'empacotar' aplicações e suas dependências, garantindo consistência entre ambientes." },
+        { "title": "React.js", "description": "Uma biblioteca JavaScript (criada pelo Facebook) para construir interfaces de usuário interativas e componentizadas." },
+        { "title": "Node.js", "description": "Permite executar JavaScript no servidor (back-end), possibilitando a criação de APIs e aplicações web completas com uma só linguagem." },
+        { "title": "Cloud (AWS, Azure, GCP)", "description": "Serviços de computação em nuvem. Onde as aplicações são hospedadas e executadas, oferecendo escalabilidade e serviços gerenciados." },
+        { "title": "APIs (REST / GraphQL)", "description": "Contratos de comunicação que permitem que diferentes sistemas (ex: front-end e back-end) troquem informações de forma padronizada." }
+      ]
+    },
+    "bancoDeDados": {
+      "title": "Banco de Dados",
+      "description": "Onde os dados da sua aplicação são armazenados de forma persistente e organizada. Entender como guardar e buscar dados é crucial.",
+      "items": [
+        { "title": "SQL (Relacional)", "description": "Bancos de dados estruturados em tabelas, como PostgreSQL e MySQL. São maduros, confiáveis e usam a linguagem SQL." },
+        { "title": "NoSQL (Não-Relacional)", "description": "Bancos flexíveis, como MongoDB (documentos) e Redis (chave-valor). Ótimos para dados não estruturados e alta escala." },
+        { "title": "Conceito de CRUD", "description": "Acrônimo para as quatro operações básicas de dados: Create (Criar), Read (Ler), Update (Atualizar) e Delete (Deletar)." },
+        { "title": "Modelagem de Dados", "description": "A 'planta baixa' do banco de dados. O processo de desenhar como as entidades (ex: Usuário, Pedido) se relacionam." },
+        { "title": "ORM (Object-Relational Mapping)", "description": "Ferramentas (ex: Sequelize, Prisma) que permitem interagir com o banco de dados usando sua linguagem de programação (ex: JS) em vez de SQL puro." },
+        { "title": "Índices e Performance", "description": "Técnica fundamental para otimizar a velocidade de consulta (leitura) no banco de dados, similar ao índice de um livro." }
+      ]
+    },
+    "iniciante": {
+      "title": "Trilha do Iniciante",
+      "description": "Começar pode ser desafiador. Esta seção combina os conceitos fundamentais que você deve focar com as ferramentas essenciais para colocar tudo em prática.",
+      "subsections": [
+        {
+          "title": "1. Conceitos Fundamentais",
+          "items": [
+            { "title": "Lógica de Programação", "description": "A fundação. É o 'como pensar' para resolver problemas de forma estruturada (variáveis, loops, condicionais) antes de tocar no código." },
+            { "title": "Escolha UMA Linguagem", "description": "Não tente aprender tudo. Escolha uma linguagem (Python ou JavaScript são ótimas) e foque nela até se sentir confortável." },
+            { "title": "Aprenda Git Básico", "description": "Saiba o básico: 'git commit', 'git push', 'git pull'. Isso salvará seu trabalho e é um requisito de mercado." },
+            { "title": "Construa Projetos Pequenos", "description": "A teoria só fixa com a prática. Crie uma calculadora, um 'To-Do List' ou um clone simples de um site. Comece pequeno e evolua." },
+            { "title": "Leia a Documentação", "description": "Aprenda a ler a documentação oficial da linguagem ou ferramenta. É a fonte primária da verdade e desenvolve sua autonomia." },
+            { "title": "Comunidade e Mentoria", "description": "Não estude sozinho. Participe de fóruns (Stack Overflow, Alura) e comunidades (Discord) para tirar dúvidas e fazer networking." }
+          ]
+        },
+        {
+          "title": "2. Dominando seu Editor: VS Code",
+          "items": [
+            { "title": "Instalação e Interface", "description": "Baixe do site oficial. Entenda a interface: Activity Bar (esquerda), Editor (centro), Terminal (embaixo) e Sidebar (explorador de arquivos)." },
+            { "title": "Extensões Essenciais", "description": "O poder do VS Code está nas extensões. Instale o 'Pack de Idioma Português', 'Prettier' (formatador) e 'Live Server' (para web)." },
+            { "title": "Terminal Integrado", "description": "Use o 'Ctrl+`' para abrir. É aqui que você executará seus programas (ex: 'node app.js') e comandos Git sem sair do editor." },
+            { "title": "Debugger (Depurador)", "description": "Aprenda a usar a aba 'Run and Debug'. Permite executar seu código linha por linha ('step-by-step') para encontrar erros." },
+            { "title": "Paleta de Comandos", "description": "O 'Ctrl+Shift+P' é seu melhor amigo. Abre uma busca onde você pode encontrar e executar qualquer comando do VS Code." },
+            { "title": "Configurações (JSON)", "description": "Use o 'Ctrl+,' para abrir as configurações. Personalize fontes, temas e comportamentos para deixar o editor com a sua cara." }
+          ]
+        }
+      ]
+    },
+    "iaStudio": {
+      "title": "Explorando IA com Google AI Studio",
+      "description": "O Google AI Studio é uma ferramenta fantástica para experimentar os modelos de IA da família Gemini. Você pode usá-lo para prototipar prompts, testar ideias e até mesmo obter o código para integrar IA em suas aplicações. Veja como começar.",
+      "steps": [
+        { "title": "1. O que é o AI Studio?", "description": "É uma interface web (IDE) que permite que você acesse e teste os modelos da API do Google Gemini. É o primeiro passo antes de integrar a IA no seu código." },
+        { "title": "2. Como Obter sua Chave de API (API Key)", "description": "Acesse o site do AI Studio (aistudio.google.com). Você precisará de uma conta Google. No painel, procure pela opção 'Get API key' (Obter chave de API). Crie uma nova chave para seu projeto. <strong>Guarde esta chave em segurança!</strong>" },
+        { "title": "3. Criando seu Primeiro Prompt", "description": "No AI Studio, você pode criar um 'Novo Prompt'. Pode ser um prompt de 'Forma Livre' (como um chat) ou 'Estruturado' (onde você dá exemplos de entrada e saída, ideal para formatar JSON, por exemplo)." },
+        { "title": "4. Testando na Prática", "description": "Digite sua instrução na caixa de texto (ex: 'Me dê 5 ideias de nome para um app de receitas') e clique em 'Run' (Executar). Você pode ajustar parâmetros como 'Temperatura' (criatividade) para refinar a resposta do modelo." },
+        { "title": "5. Explorando Exemplos e 'Gems'", "description": "A plataforma oferece diversos prompts de exemplo prontos para usar. As 'Gems' (no 'Gemini Advanced') são como apps pré-construídos por outros desenvolvedores que você pode experimentar e ver como foram feitos." },
+        { "title": "6. Integrando no seu App", "description": "Depois de gostar do seu prompt, o AI Studio tem um botão 'Get Code' (Obter Código). Ele fornecerá o snippet de código (em Python, JavaScript, etc.) pronto para você copiar, colar na sua aplicação, inserir sua API Key e chamar o modelo Gemini." }
+      ]
+    }
+  }
+}

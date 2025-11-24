@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DEV ASSISTENT</title>
+
+    <!--
+      O arquivo `data.json` é a base de conhecimento para esta aplicação.
+      Ele estrutura todo o conteúdo que é exibido dinamicamente na página.
+    -->
+
+    <link rel="stylesheet" href="devstyle.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0a0a",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(19, 91, 236, 0.4), 0 0 40px rgba(19, 91, 236, 0.3)',
+                        'card': '0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.04)',
+                        'card-dark': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), inset 0 1px 0 0 rgba(255, 255, 255, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="selection:bg-primary/30 selection:text-white bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 font-display">
+    <div id="root">
+        <header class="app-header">
+            <div class="flex items-center justify-between w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 text-black dark:text-white">
+                    <div class="size-8 text-primary">
+                        <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M155.4,53.9,134.6,33,80,87.6,90.3,98Zm-65.1,94.3,20.9,20.9L128,185.9l-10.3,10.3L101,179.4,80,200.5,59.1,179.6,101,137.7Zm106-44.5-16.7,16.8a8,8,0,0,1-11.3,0L148,104.1a8,8,0,0,1,0-11.3L164.8,76a8,8,0,0,1,11.3,0l19.2,19.2A8,8,0,0,1,195.3,103.7ZM232,128A104,104,0,1,1,128,24,104.2,104.2,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold">DEV ASSISTENT</h2>
+                </div>
+                            <div class="flex items-center gap-2">
+                                <nav id="main-nav" class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600 dark:text-gray-300">
+                                    <a class="nav-link active" href="index.html">Início</a>
+                                    <a class="nav-link" href="guia.html">Guia do Iniciante</a>
+                                </nav>
+                                <div class="hidden md:flex items-center gap-4 pl-4">
+                                    <a href="https://github.com/leoetety2017-sketch/APP-SINFONIA-storybook-" target="_blank" aria-label="GitHub Profile">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.youtube.com/@sinfon_ia" target="_blank" aria-label="YouTube Channel">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path>
+                                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@sinfon_ia" target="_blank" aria-label="TikTok Profile">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                                            <path d="M16 4.01c.88 0 1.63.22 2.25.63A7.99 7.99 0 0 1 21 11v1a6 6 0 0 1-6 6h-1a1 1 0 0 1-1-1v-5.5a5.5 5.5 0 0 0-5.5-5.5H3V6.01c.88 0 1.63-.22 2.25-.63A7.99 7.99 0 0 1 8 0V0a6 6 0 0 1 6 6h2Z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <a href="https://ai.studio/apps/drive/1p1IAzK9uotJVRpCmRlcU6X1Eln28S1a_" target="_blank" class="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 transition-colors">
+                                    Teste o app
+                                </a>
+                                <button id="theme-toggle-button" class="theme-toggle-button">
+                                    <span class="material-symbols-outlined" id="theme-icon-light">light_mode</span>
+                                    <span class="material-symbols-outlined hidden" id="theme-icon-dark">dark_mode</span>
+                                </button>
+                                <button id="mobile-menu-button" class="md:hidden theme-toggle-button">
+                                    <span class="material-symbols-outlined">menu</span>
+                                </button>
+                            </div>            </div>
+        </header>
+
+        <main class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <section id="hero-section" class="content-section text-center mb-12">
+                <h1 id="main-title" class="section-title text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-3">DEV ASSISTANT</h1>
+                <p id="main-description" class="section-description text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Assistente de IA que ajuda a construir códigos.</p>
+            </section>
+            
+            <form id="search-form" class="w-full max-w-2xl mx-auto relative mb-10">
+                <div class="flex items-center gap-2 relative">
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-white/40 pointer-events-none">search</span>
+                    <input id="search-input" class="form-input w-full bg-transparent focus:outline-none focus:ring-1 focus:ring-primary border border-white/10 rounded-lg pl-10 pr-4 py-3 text-gray-800 dark:text-white placeholder:text-gray-500 dark:placeholder:text-white/40" placeholder="Buscar..." type="search"/>
+                    <button type="submit" class="flex-shrink-0 flex items-center justify-center h-12 px-5 bg-primary text-white text-base font-bold rounded-lg shadow-glow hover:bg-primary/90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-primary">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                </div>
+            </form>
+
+            <div id="content" class="items-grid space-y-16">
+                <!-- O conteúdo será inserido aqui pelo script.js -->
+            </div>
+
+            <section class="text-center mt-20 mb-10">
+                <p class="mb-4 text-lg text-gray-600 dark:text-gray-300">
+                    Para explorar o assistente de IA em ação, conecte sua chave API do Google AI Studio.
+                </p>
+                <a href="teste.html" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white bg-primary rounded-xl hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 transition-colors shadow-glow">
+                    TESTE O APP
+                </a>
+            </section>
+        </main>
+
+        <footer class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-auto">
+            <div class="text-center text-sm text-gray-500 dark:text-white/50">
+                <p id="footer-metadata"></p>
+                <p>© 2025 DEV ASSISTENT. Inspirado na comunidade Imersão DEV Google Gemini .</p>
+            </div>
+        </footer>
+    </div>
+    
+    <div id="mobile-menu" class="mobile-menu hidden">
+        <a class="nav-link" href="index.html">Início</a>
+        <a class="nav-link" href="guia.html">Guia do Iniciante</a>
+        <div class="flex items-center justify-center gap-6 pt-4">
+            <a href="https://github.com" target="_blank" aria-label="GitHub Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube Channel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                    <path d="M16 4.01c.88 0 1.63.22 2.25.63A7.99 7.99 0 0 1 21 11v1a6 6 0 0 1-6 6h-1a1 1 0 0 1-1-1v-5.5a5.5 5.5 0 0 0-5.5-5.5H3V6.01c.88 0 1.63-.22 2.25-.63A7.99 7.99 0 0 1 8 0V0a6 6 0 0 1 6 6h2Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <div class="floating-robots-background">
+        <div class="robot-wrapper">
+            <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M155.4,53.9,134.6,33,80,87.6,90.3,98Zm-65.1,94.3,20.9,20.9L128,185.9l-10.3,10.3L101,179.4,80,200.5,59.1,179.6,101,137.7Zm106-44.5-16.7,16.8a8,8,0,0,1-11.3,0L148,104.1a8,8,0,0,1,0-11.3L164.8,76a8,8,0,0,1,11.3,0l19.2,19.2A8,8,0,0,1,195.3,103.7ZM232,128A104,104,0,1,1,128,24,104.2,104.2,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+        </div>
+        <div class="robot-wrapper">
+            <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M155.4,53.9,134.6,33,80,87.6,90.3,98Zm-65.1,94.3,20.9,20.9L128,185.9l-10.3,10.3L101,179.4,80,200.5,59.1,179.6,101,137.7Zm106-44.5-16.7,16.8a8,8,0,0,1-11.3,0L148,104.1a8,8,0,0,1,0-11.3L164.8,76a8,8,0,0,1,11.3,0l19.2,19.2A8,8,0,0,1,195.3,103.7ZM232,128A104,104,0,1,1,128,24,104.2,104.2,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+        </div>
+        <div class="robot-wrapper">
+            <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M155.4,53.9,134.6,33,80,87.6,90.3,98Zm-65.1,94.3,20.9,20.9L128,185.9l-10.3,10.3L101,179.4,80,200.5,59.1,179.6,101,137.7Zm106-44.5-16.7,16.8a8,8,0,0,1-11.3,0L148,104.1a8,8,0,0,1,0-11.3L164.8,76a8,8,0,0,1,11.3,0l19.2,19.2A8,8,0,0,1,195.3,103.7ZM232,128A104,104,0,1,1,128,24,104.2,104.2,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+        </div>
+        <div class="robot-wrapper">
+            <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M155.4,53.9,134.6,33,80,87.6,90.3,98Zm-65.1,94.3,20.9,20.9L128,185.9l-10.3,10.3L101,179.4,80,200.5,59.1,179.6,101,137.7Zm106-44.5-16.7,16.8a8,8,0,0,1-11.3,0L148,104.1a8,8,0,0,1,0-11.3L164.8,76a8,8,0,0,1,11.3,0l19.2,19.2A8,8,0,0,1,195.3,103.7ZM232,128A104,104,0,1,1,128,24,104.2,104.2,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+        </div>
+        <div class="robot-wrapper">
+            <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M155.4,53.9,134.6,33,80,87.6,90.3,98Zm-65.1,94.3,20.9,20.9L128,185.9l-10.3,10.3L101,179.4,80,200.5,59.1,179.6,101,137.7Zm106-44.5-16.7,16.8a8,8,0,0,1-11.3,0L148,104.1a8,8,0,0,1,0-11.3L164.8,76a8,8,0,0,1,11.3,0l19.2,19.2A8,8,0,0,1,195.3,103.7ZM232,128A104,104,0,1,1,128,24,104.2,104.2,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+        </div>
+        <div class="robot-wrapper">
+            <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M155.4,53.9,134.6,33,80,87.6,90.3,98Zm-65.1,94.3,20.9,20.9L128,185.9l-10.3,10.3L101,179.4,80,200.5,59.1,179.6,101,137.7Zm106-44.5-16.7,16.8a8,8,0,0,1-11.3,0L148,104.1a8,8,0,0,1,0-11.3L164.8,76a8,8,0,0,1,11.3,0l19.2,19.2A8,8,0,0,1,195.3,103.7ZM232,128A104,104,0,1,1,128,24,104.2,104.2,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+        </div>
+        <div class="robot-wrapper">
+            <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M155.4,53.9,134.6,33,80,87.6,90.3,98Zm-65.1,94.3,20.9,20.9L128,185.9l-10.3,10.3L101,179.4,80,200.5,59.1,179.6,101,137.7Zm106-44.5-16.7,16.8a8,8,0,0,1-11.3,0L148,104.1a8,8,0,0,1,0-11.3L164.8,76a8,8,0,0,1,11.3,0l19.2,19.2A8,8,0,0,1,195.3,103.7ZM232,128A104,104,0,1,1,128,24,104.2,104.2,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+        </div>
+    </div>
+</body>
+</html>

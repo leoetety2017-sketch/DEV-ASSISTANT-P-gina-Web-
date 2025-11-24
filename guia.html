@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Guia do Iniciante - DEV ASSISTENT</title>
+    
+    <!-- Inherited Styles & Config from main page -->
+    <link rel="stylesheet" href="devstyle.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // Inherited Tailwind Config
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "mono": ["monospace"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(19, 91, 236, 0.4), 0 0 40px rgba(19, 91, 236, 0.3)',
+                        'card': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), inset 0 1px 0 0 rgba(255, 255, 255, 0.07)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Styles moved to devstyle.css */
+    </style>
+</head>
+<body class="selection:bg-primary/30 selection:text-white bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 holographic-lines">
+    <div id="root">
+        <header class="app-header">
+            <div class="flex items-center justify-between w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 text-black dark:text-white">
+                     <a href="index.html" class="flex items-center gap-2 text-primary hover:underline">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        <span>Voltar</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="hidden md:flex items-center gap-4">
+                        <a href="https://github.com" target="_blank" aria-label="GitHub Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube Channel">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                                <path d="M16 4.01c.88 0 1.63.22 2.25.63A7.99 7.99 0 0 1 21 11v1a6 6 0 0 1-6 6h-1a1 1 0 0 1-1-1v-5.5a5.5 5.5 0 0 0-5.5-5.5H3V6.01c.88 0 1.63-.22 2.25-.63A7.99 7.99 0 0 1 8 0V0a6 6 0 0 1 6 6h2Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <button id="theme-toggle-button" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary">
+                        <span class="material-symbols-outlined" id="theme-icon-light">light_mode</span>
+                        <span class="material-symbols-outlined hidden" id="theme-icon-dark">dark_mode</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-grow w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <section class="text-center mb-10">
+                <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-2 text-glow">Guia do Iniciante</h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300">Seu ponto de partida no universo da programação. Explore os tópicos essenciais para sua jornada.</p>
+            </section>
+            
+            <!-- Tab Navigation for the Guide -->
+            <nav class="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-10">
+                <button class="guide-nav-button" data-page="inicio">Início</button>
+                <button class="guide-nav-button" data-page="linguagens">Linguagens</button>
+                <button class="guide-nav-button" data-page="tecnologias">Tecnologias</button>
+                <button class="guide-nav-button" data-page="bancoDeDados">Banco de Dados</button>
+                <button class="guide-nav-button" data-page="iniciante">Trilha do Iniciante</button>
+                <button class="guide-nav-button" data-page="iaStudio">Explore IA</button>
+            </nav>
+
+            <!-- Content Area -->
+            <div id="content-area">
+                <!-- Guide content will be injected here -->
+            </div>
+        </main>
+        
+        <footer class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mt-auto">
+             <div class="text-center text-sm text-gray-500 dark:text-white/50">
+                <p>© 2025 DEV ASSISTENT. Inspirado pela comunidade.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- ELEMENT SELECTORS ---
+            const contentArea = document.getElementById('content-area');
+            const navButtons = document.querySelectorAll('.guide-nav-button');
+            const themeToggleButton = document.getElementById('theme-toggle-button');
+            const themeIconLight = document.getElementById('theme-icon-light');
+            const themeIconDark = document.getElementById('theme-icon-dark');
+            const htmlElement = document.documentElement;
+
+            let guideData = {}; // To store the fetched JSON data
+
+            // --- THEME-TOGGLE LOGIC ---
+            const applyTheme = (theme) => {
+                if (theme === 'dark') {
+                    htmlElement.classList.add('dark');
+                    themeIconLight.classList.add('hidden');
+                    themeIconDark.classList.remove('hidden');
+                } else {
+                    htmlElement.classList.remove('dark');
+                    themeIconLight.classList.remove('hidden');
+                    themeIconDark.classList.add('hidden');
+                }
+            };
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            applyTheme(savedTheme);
+            themeToggleButton.addEventListener('click', () => {
+                const newTheme = htmlElement.classList.contains('dark') ? 'light' : 'dark';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+
+            // --- DATA FETCHING & DYNAMIC RENDERING ---
+            
+            // Helper function to create a content card
+            function createCard(title, description) {
+                return `
+                    <div class="card-item">
+                        <div class="flex-grow">
+                            <h4 class="font-semibold text-lg text-gray-800 dark:text-white">${title}</h4>
+                            <p class="text-gray-600 dark:text-white/70 mt-2">${description}</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Helper function to create a step for the IA guide
+            function createStep(title, description) {
+                return `
+                    <li class="p-4 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                        <h4 class="font-semibold text-lg text-gray-800 dark:text-white">${title}</h4>
+                        <p class="text-gray-600 dark:text-white/70 mt-1">${description}</p>
+                    </li>
+                `;
+            }
+
+            // Renders the chart for the 'inicio' page
+            function createFocusChart(chartData) {
+                const chartEl = document.getElementById('focusChart');
+                if (!chartEl) return;
+                
+                new Chart(chartEl.getContext('2d'), {
+                    type: 'bar', 
+                    data: {
+                        labels: chartData.labels,
+                        datasets: [{
+                            label: 'Nível de Foco (0-100)',
+                            data: chartData.data,
+                            backgroundColor: ['rgba(59, 130, 246, 0.7)', 'rgba(34, 197, 94, 0.7)', 'rgba(249, 115, 22, 0.7)', 'rgba(168, 85, 247, 0.7)', 'rgba(107, 114, 128, 0.7)'],
+                            borderColor: ['#fff'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+                        scales: {
+                            x: { beginAtZero: true, max: 100, grid: { color: 'rgba(255,255,255,0.1)'}, ticks: { color: 'rgba(255,255,255,0.7)'}},
+                            y: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.9)', font: { size: 14 }}}
+                        },
+                        plugins: { legend: { display: false }}
+                    }
+                });
+            }
+
+            // Main function to render content based on the page key
+            function navigateTo(pageKey) {
+                if (!guideData.pages || !guideData.pages[pageKey]) return;
+
+                const page = guideData.pages[pageKey];
+                let html = '';
+
+                switch (pageKey) {
+                    case 'inicio':
+                        html = `
+                            <div class="content-section">
+                                <h2 class="section-title text-center">${page.title}</h2>
+                                <p class="section-description text-center max-w-3xl mx-auto">${page.description}</p>
+                                <div class="chart-container mx-auto">
+                                    <canvas id="focusChart"></canvas>
+                                </div>
+                            </div>`;
+                        break;
+
+                    case 'iniciante':
+                        html = page.subsections.map(sub => `
+                            <div class="content-section mb-8">
+                                <h2 class="section-title">${sub.title}</h2>
+                                <div class="items-grid">
+                                    ${sub.items.map(item => createCard(item.title, item.description)).join('')}
+                                </div>
+                            </div>`).join('');
+                        break;
+                    
+                    case 'iaStudio':
+                        html = `
+                            <div class="content-section">
+                                <h2 class="section-title">${page.title}</h2>
+                                <p class="section-description">${page.description}</p>
+                                <ol class="space-y-6 list-decimal list-inside">
+                                    ${page.steps.map(step => createStep(step.title, step.description)).join('')}
+                                </ol>
+                            </div>`;
+                        break;
+
+                    default: // For linguagens, tecnologias, bancoDeDados
+                        html = `
+                            <div class="content-section">
+                                <h2 class="section-title">${page.title}</h2>
+                                <p class="section-description">${page.description}</p>
+                                <div class="items-grid">
+                                    ${page.items.map(item => createCard(item.title, item.description)).join('')}
+                                </div>
+                            </div>`;
+                        break;
+                }
+                
+                contentArea.innerHTML = html;
+                
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                const activeButton = document.querySelector(`[data-page="${pageKey}"]`);
+                if (activeButton) activeButton.classList.add('active');
+                
+                if (pageKey === 'inicio') {
+                    setTimeout(() => createFocusChart(page.chart), 50);
+                }
+            }
+
+            // Load data and initialize the page
+            async function initializeGuide() {
+                try {
+                    const response = await fetch('guiadata.json');
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    guideData = await response.json();
+                    
+                    navButtons.forEach(button => {
+                        button.addEventListener('click', (e) => navigateTo(e.target.dataset.page));
+                    });
+
+                    navigateTo('inicio'); // Load the initial page
+                } catch (error) {
+                    console.error("Failed to load guide data:", error);
+                    contentArea.innerHTML = `<p class="text-red-500 text-center">Erro ao carregar o conteúdo do guia. Verifique o console.</p>`;
+                }
+            }
+
+            initializeGuide();
+        });
+    </script>
+</body>
+</html>
